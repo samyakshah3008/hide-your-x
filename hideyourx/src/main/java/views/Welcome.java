@@ -50,6 +50,8 @@ public class Welcome {
 
                 if (otp.equals(genOTP)) {
                     System.out.println("Welcome, successful login");
+                    new UserView(email).home();
+
                 } else {
                     System.out.println("WRONG OTP");
                 }
