@@ -79,10 +79,13 @@ public class Welcome {
             User user = new User(name, email);
 
             int response = UserService.saveUser(user);
-
             switch (response) {
-                case 0 -> System.out.println("User registered");
-                case 1 -> System.out.println("User already exists");
+                case 1 -> {
+                    System.out.println("Successful operation");
+                }
+                case 0 -> {
+                    System.out.println("Successful operation");
+                }
             }
         } else {
             System.out.println("WRONG OTP");
